@@ -24,7 +24,7 @@ function App() {
   }
 
   useEffect(()=>{
-    const todo =JSON.parse(localStorage.getItem('todos'))
+    const todo =JSON.parse(localStorage.getItem("todos"))
 
     if (todos && todos.lenght > 0) {
       setTodos(todos)
@@ -32,8 +32,8 @@ function App() {
   },[])
 
 useEffect(()=>{
-  localStorage.setItem
-},[])
+  localStorage.setItem("todos", JSON.stringify(todos))
+},[todos])
 
   return (
  <TodoProvider value={{todos, addTodo, updateTodo, deletTodo, toggleComplete}} >
