@@ -113,17 +113,17 @@
 // }
 // PromiseRecounsumeing()
 
-async function GetAllUser(){
-    try{
-        const Response= await fetch('https://jsonplaceholder.typicode.com/users')
-        const data= await Response.json()
-            console.log(data);
-    }
-    catch(err){
-        console.log(err);
-    }
-}
-GetAllUser()
+// async function GetAllUser(){
+//     try{
+//         const Response= await fetch('https://jsonplaceholder.typicode.com/users')
+//         const data= await Response.json()
+//             console.log(data);
+//     }
+//     catch(err){
+//         console.log(err);
+//     }
+// }
+// GetAllUser()
 
 // fetch('https://jsonplaceholder.typicode.com/users')
 // .then((data)=>{
@@ -134,9 +134,40 @@ GetAllUser()
 //     console.log("Fetching Proccess Sucsser or Error")
 // })
 
-const ass=  fetch('https://jsonplaceholder.typicode.com/users')
-.then(function(data){
-    console.log(data)
-}).catch(function(err){
-    console.log(err);
-})
+// const ass=  fetch('https://jsonplaceholder.typicode.com/users')
+// .then(function(data){
+//     console.log(data)
+// }).catch(function(err){
+//     console.log(err);
+// })
+
+
+
+
+// const arr1= [1, 2, 3, 4, 5]
+// // const new1 = arr1.reverse()
+// // console.log(new1);
+
+// Array.prototype.reverArray=function (){
+//     let newArra= []
+
+//     for (let i = this.length-1; i>=0; i--) {
+//         newArra.push(this[i]);   
+//     }
+//     return newArra
+// }
+// const ans=arr1.reverArray()
+// console.log(ans);
+
+
+const arr= [2, 4, 6, 2,8 ,6 ]
+Array.prototype.ArrayMethod= function(){
+    const newArray=[]
+    for(let i= this.length-1; i>=0; i--){
+        newArray.push(this[i])
+    }
+    return newArray
+}
+
+const q2= arr.ArrayMethod()
+console.log(typeof q2);
